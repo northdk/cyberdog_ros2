@@ -59,7 +59,7 @@ std::string get_var_name(const std::string & full_name)
         if (get == true) {
           printf(
             C_RED "[DEVICE_BASE][ERROR] Not support class or struct "
-            "in device_data class:\"%s\"\n" C_END,
+            "in TDataClass:\"%s\"\n" C_END,
             full_name.c_str());
         }
         var_name = "";
@@ -155,10 +155,10 @@ bool toml_parse(toml::value & toml, const std::string & path)
   return true;
 }
 
-class device_data_var
+class device_data
 {
 public:
-  device_data_var(uint8_t len, void * addr)
+  device_data(uint8_t len, void * addr)
   {
     this->len = len;
     this->addr = addr;
